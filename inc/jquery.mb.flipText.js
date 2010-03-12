@@ -16,7 +16,6 @@
  *
  */
 
-
 (function($) {
   var isIE=$.browser.msie;
   jQuery.fn.encHTML = function() {
