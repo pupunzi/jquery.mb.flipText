@@ -1,0 +1,80 @@
+<!doctype html>
+<!--
+  ~ jquery.mb.components
+  ~ Copyright (c) 2001-2010. Matteo Bicocchi (Pupunzi); Open lab srl, Firenze - Italy
+  ~ email: info@pupunzi.com
+  ~ site: http://pupunzi.com
+  ~
+  ~ Licences: MIT, GPL
+  ~ http://www.opensource.org/licenses/mit-license.php
+  ~ http://www.gnu.org/licenses/gpl.html
+  -->
+
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+  <title>mb.fliptext</title>
+  <style type="text/css">
+    body{
+      font-family: Helvetica,sans-serif;
+      margin:50px;
+    }
+    .tb {font-family: Helvetica,sans-serif; font-size:44px;  color:black; display:block;}
+    .bt {font-family: Georgia,sans-serif; font-size:44px; color:orange; display:block;}
+
+
+    span.btn{
+      padding:10px;
+      border:2px solid white;
+      display:inline-block;
+      cursor:pointer;
+      font:14px/14px Arial, Helvetica, sans-serif;
+      color:#aaa;
+      background-color:#eee;
+      -moz-border-radius:10px;
+      -webkit-border-radius:10px;
+      -moz-box-shadow:#999 2px 0px 3px;
+      -webkit-box-shadow:#999 2px 0px 3px;
+    }
+    span.btn:hover{
+      background-color:#ddd;
+      color:white;
+    }
+
+  </style>
+  <script type="text/javascript" src="http://jquery.com/src/jquery-latest.js"></script>
+  <script type="text/javascript" src="inc/jquery.mb.flipText.js"></script>
+  <script type="text/javascript">
+
+    $(function(){
+      if (self.location.href == top.location.href){
+        var logo=$("<a href='http://pupunzi.com'><img id='logo' border='0' src='http://pupunzi.com/images/logo.png' alt='mb.ideas.repository' style='display:none;'></a>").css({position:"absolute", top:10});
+        $("body").prepend(logo);
+        $("#logo").fadeIn();
+      }
+      $("#clickFliptb").one("click",function(){$(".tb").mbFlipText(true);$(this).fadeTo(500,.0,function(){$(this).css("visibility","hidden");});});
+      $("#clickFlipbt").one("click",function() {$('.bt').mbFlipText(false);$(this).fadeTo(500,.0,function(){$(this).css("visibility","hidden");});});
+    });
+
+  </script>
+
+</head>
+<body>
+<div style="clear:both;"></div>
+<div style="display:inline-block; padding:40px; width:400px; float:left;">
+
+  <span id="clickFliptb" class="btn" >flip this text <strong>top</strong> -> <strong>bottom</strong>:</span>
+  <br>
+  <br>
+  <div class="tb" style="background:#f3f3f3; white-space:nowrap; ">“text top to bottom”</div>
+</div>
+<div style="display:inline-block; padding:40px; width:400px;">
+  <span id="clickFlipbt" class="btn">flip this text <strong>bottom</strong> -> <strong>top</strong>:</span>
+  <br>
+  <br>
+  <a class="bt" href="javascript:alert('ahahaha!!');">“text bottom to top”</a>
+  <!--<div class="bt" onclick="alert('ahahaha!!');">“text bottom to top”</div>-->
+</div>
+</body>
+</html>

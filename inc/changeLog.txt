@@ -1,0 +1,6 @@
+jquery.mb.flipText
+
+1.1
+fixed some bug and improved performance with several istances.
+
+1.0 first release.
