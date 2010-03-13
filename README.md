@@ -1,6 +1,6 @@
 # mb.flipText 1.1
 
-__An open source jQuery component to flip our text vertically.__
+__An open source jQuery component to flip your text vertically.__
 
 ![mb.flipText](http://pupunzi.com/gitHub/mb.flipText.jpg)
 
