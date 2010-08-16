@@ -2,7 +2,7 @@
 <!--
   ~ jquery.mb.components
   ~ Copyright (c) 2001-2010. Matteo Bicocchi (Pupunzi); Open lab srl, Firenze - Italy
-  ~ email: info@pupunzi.com
+  ~ email: mbicocchi@open-lab.com
   ~ site: http://pupunzi.com
   ~
   ~ Licences: MIT, GPL
@@ -22,6 +22,7 @@
     }
     .tb {font-family: Helvetica,sans-serif; font-size:44px;  color:black; display:block;}
     .bt {font-family: Georgia,sans-serif; font-size:44px; color:orange; display:block;}
+    .flipbt {font-family: Georgia,sans-serif; font-size:14px; color:#000; display:inline-block;}
 
 
     span.btn{
@@ -55,6 +56,9 @@
       }
       $("#clickFliptb").one("click",function(){$(".tb").mbFlipText(true);$(this).fadeTo(500,.0,function(){$(this).css("visibility","hidden");});});
       $("#clickFlipbt").one("click",function() {$('.bt').mbFlipText(false);$(this).fadeTo(500,.0,function(){$(this).css("visibility","hidden");});});
+
+
+      $(".flipbt").mbFlipText(false);
     });
 
   </script>
@@ -76,5 +80,10 @@
   <a class="bt" href="javascript:alert('ahahaha!!');">“text bottom to top”</a>
   <!--<div class="bt" onclick="alert('ahahaha!!');">“text bottom to top”</div>-->
 </div>
+<br>
+<span class="flipbt" style="white-space:nowrap;">Lorem Ipsum is simply dummy text of the printing and typesetting industry's standard.</span>
+<span class="flipbt" >dummy text ever since the 1500s, when an unknown printer took a </span>
+<span class="flipbt" >galley of type and scrambled it to make a type specimen book.</span>
+
 </body>
 </html>
