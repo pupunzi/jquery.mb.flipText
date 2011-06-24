@@ -78,7 +78,7 @@
                   "");
         }
         var wrapper= onClick ? $("<div/>").css("position","relative"): $("");
-        var cssPos= el.wrap(wrapper).css("position")!="absolute" || el.css("position")!="fixed"  ?"relative" : el.css("position");
+        var cssPos= el.wrap(wrapper).css("position")!="absolute" || el.css("position")!="fixed"  ? "relative" : el.css("position");
         //var cssPos= el.css("position")!="absolute" || el.css("position")!="fixed"  ?"relative" : el.css("position");
 
         el.html(label).css({position:cssPos, width:w});
